@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QianKun Study</title>
+</head>
+<body>
+    <div class="mainapp-main">
+        <!-- 侧边栏 -->
+        <ul class="mainapp-sidemenu">
+            <!-- vue3 hash 模式路由 -->
+            <li onclick="push('/vue3/#/')">Vue3</li>
+            <li onclick="push('/vue2/#/')">Vue2</li>
+            <li onclick="push('/react18/#/')">React18</li>
+        </ul>
+        <!-- 子应用  -->
+        <main id="container">微应用加载中...</main>
+      </div>
+      <script>
+        function push(subApp) { history.pushState(null, subApp, subApp) }
+      </script>
+</body>
+</html>
